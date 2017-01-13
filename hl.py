@@ -2,7 +2,7 @@
 #coding:utf-8
 import requests
 import time
-from colorama import init, Fore
+#from colorama import init, Fore
 
 while True:
 	time.sleep(2)
@@ -13,5 +13,5 @@ while True:
 	last_price_cn = r.json()['ticker']['last']
 	last_price_int = l.json()['ticker']['last']
 	hl = float(last_price_cn)/float(last_price_int)
-	print('币价: |', Fore.RED + str(last_price_cn) + Fore.RESET,'¥',Fore.RED + str(last_price_int) + Fore.RESET,'$')
-	print('汇率: |', Fore.GREEN + str(hl) + Fore.RESET, '\n--------------------------')
+	print('币价: |', str(last_price_cn),'¥',(last_price_int),'$')
+	print('汇率: |', str(hl), '\n--------------------------')
